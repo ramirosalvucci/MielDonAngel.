@@ -9,71 +9,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #f7f7f9;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #2cb67d;
-      --accent-dark:#239565;
-      --ring: rgba(44,182,125,.25);
+      --bg:#f7f7f9; --surface:#fff; --text:#1f2937; --muted:#6b7280;
+      --accent:#2cb67d; --accent-dark:#239565; --ring:rgba(44,182,125,.25);
     }
     *{box-sizing:border-box}
-    body{margin:0; background:var(--bg); color:var(--text); font-family: "Inter", sans-serif; line-height:1.6}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter",sans-serif;line-height:1.6}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* Header */
-    header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(10px); background:rgba(255,255,255,.8); border-bottom:1px solid #e5e7eb}
+    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(10px);background:rgba(255,255,255,.8);border-bottom:1px solid #e5e7eb}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{font-family:"Poppins"; font-weight:800; letter-spacing:.2px}
+    .brand{font-family:"Poppins";font-weight:800;letter-spacing:.2px}
     .brand span{color:var(--accent)}
-    .btn{appearance:none; border:1px solid transparent; background:var(--accent); color:#fff; font-weight:600; padding:10px 14px; border-radius:10px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; box-shadow:0 6px 16px var(--ring)}
+    .btn{appearance:none;border:1px solid transparent;background:var(--accent);color:#fff;font-weight:600;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 16px var(--ring)}
     .btn:hover{background:var(--accent-dark)}
     .btn.dark{background:#111827}
 
-    /* Hero compacto y legible */
-    .hero{position:relative; isolation:isolate; text-align:center}
-    .hero::before{content:""; position:absolute; inset:0; z-index:0; background:url('images/Tipos-de-colmenas-y-consumo-de-cera-1-1.jpg.webp') center/cover no-repeat; filter:blur(2px) brightness(.55)}
-    .overlay{position:absolute; inset:0; z-index:0; background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.35), rgba(0,0,0,.55)); pointer-events:none}
-    .hero-inner{position:relative; z-index:1; padding:64px 20px 48px}
-    .hero h1{font-family:"Poppins"; font-weight:800; font-size:clamp(28px,4.2vw,44px); margin:0 0 10px; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.6)}
-    .hero p{max-width:760px; margin:0 auto 16px; color:#f3f4f6; font-size:18px; line-height:1.5; text-shadow:0 1px 5px rgba(0,0,0,.5)}
-    .cta-row{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:8px}
+    .hero{position:relative;isolation:isolate;text-align:center}
+    .hero::before{content:"";position:absolute;inset:0;z-index:0;background:url('images/Tipos-de-colmenas-y-consumo-de-cera-1-1.jpg.webp') center/cover no-repeat;filter:blur(2px) brightness(.55)}
+    .overlay{position:absolute;inset:0;z-index:0;background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.35), rgba(0,0,0,.55));pointer-events:none}
+    .hero-inner{position:relative;z-index:1;padding:64px 20px 48px}
+    .hero h1{font-family:"Poppins";font-weight:800;font-size:clamp(28px,4.2vw,44px);margin:0 0 10px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+    .hero p{max-width:760px;margin:0 auto 16px;color:#f3f4f6;font-size:18px;line-height:1.5;text-shadow:0 1px 5px rgba(0,0,0,.5)}
+    .cta-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:8px}
 
-    /* Productos */
     .products{padding:28px 0}
-    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:720px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--surface); border:1px solid #e5e7eb; border-radius:16px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,.06)}
-    .card img{width:100%; height:220px; object-fit:cover}
+    .card{background:var(--surface);border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);display:flex;flex-direction:column}
+    .card img{width:100%;height:220px;object-fit:cover}
     .card-body{padding:16px}
-    .tag{display:inline-block; font-size:12px; color:#0f172a; background:#e2e8f0; padding:4px 8px; border-radius:16px; font-weight:600}
-    .title{font-family:"Poppins"; font-weight:700; margin:10px 0 6px}
-    .price{font-size:22px; font-weight:800}
+    .tag{display:inline-block;font-size:12px;color:#0f172a;background:#e2e8f0;padding:4px 8px;border-radius:16px;font-weight:600}
+    .title{font-family:"Poppins";font-weight:700;margin:10px 0 6px}
+    .price{font-size:22px;font-weight:800}
+    .actions{margin-top:14px}
+    .note{font-size:12px;color:var(--muted);margin-top:8px}
 
-    /* About */
-    .about{padding:24px 0; text-align:center}
-    .about h2{font-family:"Poppins"; font-weight:800; margin-bottom:12px}
-    .about p{max-width:800px; margin:0 auto; color:var(--muted)}
+    .about{padding:24px 0;text-align:center}
+    .about h2{font-family:"Poppins";font-weight:800;margin-bottom:12px}
+    .about p{max-width:800px;margin:0 auto;color:var(--muted)}
 
-    /* Gallery */
     .gallery{padding:16px 0 40px}
-    .gallery h2{font-family:"Poppins"; font-weight:800; text-align:center; margin-bottom:18px}
-    .gallery-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-    .gallery-grid img{width:100%; height:200px; object-fit:cover; border-radius:14px; filter:grayscale(10%)}
+    .gallery h2{font-family:"Poppins";font-weight:800;text-align:center;margin-bottom:18px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:14px;filter:grayscale(10%)}
     @media (max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr}}
     @media (max-width:600px){.gallery-grid{grid-template-columns:1fr}}
 
-    footer{padding:20px 0; border-top:1px solid #e5e7eb; color:var(--muted); font-size:14px; text-align:center}
-    footer a{color:var(--accent); text-decoration:none}
+    footer{padding:20px 0;border-top:1px solid #e5e7eb;color:var(--muted);font-size:14px;text-align:center}
+    footer a{color:var(--accent);text-decoration:none}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">Miel <span>Don Ángel</span></div>
+      <div class="brand">🐝 Miel <span>Don Ángel</span></div>
       <div style="display:flex; gap:10px; align-items:center;">
-        <!-- Botón WhatsApp -->
-        <a class="btn" href="https://wa.me/5492243406957?text=Hola%20quiero%20encargar%20miel%20Don%20Ángel" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://wa.me/5492243406957?text=Hola%20quiero%20encargar%20miel%20Don%20%C3%81ngel" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn dark" href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
@@ -85,7 +77,7 @@
       <h1>Miel Don Ángel – natural, directa del productor</h1>
       <p>Frascos de 1 kilo y 1/2 kilo. Calidad artesanal y controlada en cada cosecha. Somos productores de <b>General Belgrano, Buenos Aires</b>.</p>
       <div class="cta-row">
-        <a class="btn" href="https://wa.me/5492243406957?text=Hola%20quiero%20encargar%20miel%20Don%20Ángel" target="_blank" rel="noopener">Encargar por WhatsApp</a>
+        <a class="btn" href="https://wa.me/5492243406957?text=Hola%20quiero%20encargar%20miel%20Don%20%C3%81ngel" target="_blank" rel="noopener">Encargar por WhatsApp</a>
         <a class="btn dark" href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Ver Instagram</a>
       </div>
     </div>
@@ -94,27 +86,44 @@
   <section class="products">
     <div class="container">
       <div class="grid">
+        <!-- 1 kg -->
         <article class="card">
           <img src="images/IMG_5268.jpeg" alt="Frasco de miel de 1 kilo" />
           <div class="card-body">
             <span class="tag">1 kg</span>
             <h3 class="title">Frasco 1 kilo</h3>
-            <div class="price">$6.000</div>
+            <div class="price">$7.000</div>
             <div class="actions">
-              <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%201kg" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%201%20kg%20de%20miel%20Don%20%C3%81ngel" target="_blank" rel="noopener">Pedir por WhatsApp</a>
             </div>
+            <div class="note">Miel 100% pura, sin aditivos.</div>
           </div>
         </article>
 
+        <!-- 1/2 kg -->
         <article class="card">
           <img src="images/IMG_5268.jpeg" alt="Frasco de miel de medio kilo" />
           <div class="card-body">
             <span class="tag">1/2 kg</span>
             <h3 class="title">Frasco 1/2 kilo</h3>
-            <div class="price">$3.000</div>
+            <div class="price">$3.500</div>
             <div class="actions">
-              <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%20500g" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+              <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%20500%20g%20de%20miel%20Don%20%C3%81ngel" target="_blank" rel="noopener">Pedir por WhatsApp</a>
             </div>
+          </div>
+        </article>
+
+        <!-- Combo 2 kg -->
+        <article class="card">
+          <img src="images/IMG_5268.jpeg" alt="Combo 2 kilos de miel" />
+          <div class="card-body">
+            <span class="tag">Promo</span>
+            <h3 class="title">Combo 2 kg</h3>
+            <div class="price">$13.000</div>
+            <div class="actions">
+              <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20el%20combo%20de%202%20kg%20de%20miel%20por%20$13.000" target="_blank" rel="noopener">Pedir combo</a>
+            </div>
+            <div class="note">Ideal para familia o compartir.</div>
           </div>
         </article>
       </div>
@@ -141,7 +150,8 @@
 
   <footer>
     <div class="container">
-      © <span id="y"></span> Miel Don Ángel · General Belgrano, Buenos Aires · <a href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Instagram</a>
+      © <span id="y"></span> Miel Don Ángel · General Belgrano, Buenos Aires ·
+      <a href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
 
