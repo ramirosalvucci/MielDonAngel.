@@ -4,24 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Miel Don Ángel</title>
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Google Ads Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17507470900"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17507470900');
-  </script>
-
   <style>
     :root{
       --bg: #f7f7f9;
@@ -45,7 +31,7 @@
     .btn:hover{background:var(--accent-dark)}
     .btn.dark{background:#111827}
 
-    /* Hero */
+    /* Hero compacto y legible */
     .hero{position:relative; isolation:isolate; text-align:center}
     .hero::before{content:""; position:absolute; inset:0; z-index:0; background:url('images/Tipos-de-colmenas-y-consumo-de-cera-1-1.jpg.webp') center/cover no-repeat; filter:blur(2px) brightness(.55)}
     .overlay{position:absolute; inset:0; z-index:0; background:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.35), rgba(0,0,0,.55)); pointer-events:none}
@@ -54,7 +40,7 @@
     .hero p{max-width:760px; margin:0 auto 16px; color:#f3f4f6; font-size:18px; line-height:1.5; text-shadow:0 1px 5px rgba(0,0,0,.5)}
     .cta-row{display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:8px}
 
-    /* Products */
+    /* Productos */
     .products{padding:28px 0}
     .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
     @media (max-width:720px){.grid{grid-template-columns:1fr}}
@@ -81,6 +67,15 @@
     footer{padding:20px 0; border-top:1px solid #e5e7eb; color:var(--muted); font-size:14px; text-align:center}
     footer a{color:var(--accent); text-decoration:none}
   </style>
+
+  <!-- Google Ads tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17507470900"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17507470900');
+  </script>
 </head>
 <body>
   <header>
@@ -125,7 +120,7 @@
           <div class="card-body">
             <span class="tag">1/2 kg</span>
             <h3 class="title">Frasco 1/2 kilo</h3>
-            <div class="price">$4.000</div>
+            <div class="price">$3.500</div>
             <div class="actions">
               <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%20500g" target="_blank" rel="noopener">Pedir por WhatsApp</a>
             </div>
@@ -155,8 +150,7 @@
 
   <footer>
     <div class="container">
-      © <span id="y"></span> Miel Don Ángel · General Belgrano, Buenos Aires · 
-      <a href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Instagram</a>
+      © <span id="y"></span> Miel Don Ángel · General Belgrano, Buenos Aires · <a href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
 
