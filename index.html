@@ -42,7 +42,8 @@
 
     /* Productos */
     .products{padding:28px 0}
-    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:720px){.grid{grid-template-columns:1fr}}
     .card{background:var(--surface); border:1px solid #e5e7eb; border-radius:16px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,.06)}
     .card img{width:100%; height:220px; object-fit:cover}
@@ -50,6 +51,7 @@
     .tag{display:inline-block; font-size:12px; color:#0f172a; background:#e2e8f0; padding:4px 8px; border-radius:16px; font-weight:600}
     .title{font-family:"Poppins"; font-weight:700; margin:10px 0 6px}
     .price{font-size:22px; font-weight:800}
+    .actions{margin-top:12px}
 
     /* About */
     .about{padding:24px 0; text-align:center}
@@ -92,7 +94,7 @@
     <div class="overlay"></div>
     <div class="container hero-inner">
       <h1>Miel Don Ángel – natural, directa del productor</h1>
-      <p>Frascos de 1 kilo y 1/2 kilo. Calidad artesanal y controlada en cada cosecha. Somos productores de <b>General Belgrano, Buenos Aires</b>.</p>
+      <p>Frascos de 1 kilo, 1/2 kilo y 2 kilos. Calidad artesanal y controlada en cada cosecha. Somos productores de <b>General Belgrano, Buenos Aires</b>.</p>
       <div class="cta-row">
         <a class="btn" href="https://wa.me/5492243406957?text=Hola%20quiero%20encargar%20miel%20Don%20Ángel" target="_blank" rel="noopener">Encargar por WhatsApp</a>
         <a class="btn dark" href="https://www.instagram.com/donangelmieles?igsh=dnk5b205amJvMGo1" target="_blank" rel="noopener">Ver Instagram</a>
@@ -103,6 +105,7 @@
   <section class="products">
     <div class="container">
       <div class="grid">
+        <!-- 1 kg -->
         <article class="card">
           <img src="images/IMG_5268.jpeg" alt="Frasco de miel de 1 kilo" />
           <div class="card-body">
@@ -115,14 +118,28 @@
           </div>
         </article>
 
+        <!-- 1/2 kg -->
         <article class="card">
           <img src="images/IMG_5268.jpeg" alt="Frasco de miel de medio kilo" />
           <div class="card-body">
             <span class="tag">1/2 kg</span>
             <h3 class="title">Frasco 1/2 kilo</h3>
-            <div class="price">$3.500</div>
+            <div class="price">$4.000</div>
             <div class="actions">
               <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%20500g" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 kg -->
+        <article class="card">
+          <img src="images/IMG_5268.jpeg" alt="Frasco de miel de 2 kilos" />
+          <div class="card-body">
+            <span class="tag">2 kg</span>
+            <h3 class="title">Promo Familiar 2kg</h3>
+            <div class="price">$13.000</div>
+            <div class="actions">
+              <a class="btn" href="https://wa.me/5492243406957?text=Hola%2C%20quiero%20un%20frasco%20de%202kg" target="_blank" rel="noopener">Pedir por WhatsApp</a>
             </div>
           </div>
         </article>
